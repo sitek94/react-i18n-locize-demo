@@ -1,0 +1,38 @@
+{
+    "app_title": "React i18n Demo",
+    "about_initialization": {
+        "title": "Acerca de la inicialización",
+        "description_1": "i18n se inicializa en el archivo <1>src/i18n.ts</1>.",
+        "description_2": "Visite la documentación de i18next para obtener más información",
+        "webhook_test": "Me ven rodando, odian."
+    },
+    "plurals": {
+        "title": "Plurales",
+        "description": "Existen sufijos clave \"especiales\" que pueden utilizarse para tratar los plurales. En inglés son \"_zero\", \"_one\" y \"_other\".",
+        "count": "Cuenta:",
+        "example_zero": "No has subido ninguna lectura :(",
+        "example_one": "Has subido 1 lectura.",
+        "example_other": "Has subido {{count}} lecturas.",
+        "example_few": "__NO_TRANSLATE__",
+        "example_many": "Has subido {{count}} lecturas."
+    },
+    "interpolation": {
+        "title": "Interpolación",
+        "description": "Puede utilizar la interpolación para insertar valores dinámicos en las cadenas.",
+        "example": "¡Hola, {{name}}! ¿Cómo estás?",
+        "input_label": "Editar el nombre"
+    },
+    "multiple_fallback_keys": {
+        "title": "Múltiples teclas de retroceso",
+        "button": {
+            "text": "Siguiente error, por favor.",
+            "image": "Bomba"
+        },
+        "description": "Podemos combinar múltiples claves de retroceso con la interpolación, ¡e incluso traducir las variables que se interpolan!",
+        "example": "Así que aquí hay un código de error: '{{errorCode}}', y dice: '{{message}}', bonito ¿eh?"
+    },
+    "webhooks": {
+        "text": "Probar la integración de Webhooks con el editor de PO",
+        "title": "Webhooks"
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "reading_type": {
+    "glucose": "Glucose",
+    "ketone": "Ketones",
+    "glucose_ketone_index": "GKI (Glucose Ketone Index)"
+  }
+}

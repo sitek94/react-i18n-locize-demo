@@ -1,0 +1,12 @@
+{
+  "error": {
+    "unspecific": "Coś poszło nie tak",
+    "400": "Nieprawidłowe żądanie",
+    "401": "Brak autoryzacji",
+    "403": "Brak dostępu",
+    "404": "Nie znaleziono",
+    "500": "Błąd serwera",
+    "503": "Serwer nie działa",
+    "504": "Serwer nie odpowiada"
+  }
+}
