@@ -37,7 +37,7 @@ export function DateFns() {
   const past = subMinutes(now, count)
 
   return (
-    <Section title={t('date-fns.title')} className="date-fns">
+    <Section title={t('dateFns.title')} className="date-fns">
       <pre>
         <code>
           now = new Date() <br />

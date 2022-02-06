@@ -1,13 +1,6 @@
 /**
  * @fileoverview i18n initialization
  *
- * The translations can be found in the `public/locales` folder.
- *
- * ⚠️ If you're a Polish speaker, you may notice, that I'm not doing a really
- * good job with the translations and some texts are actually completely different
- * to the ones in English. I don't really care, because it's just a demo, but you
- * probably shouldn't do it in production
- *
  * 🚓 Keys Naming Convention
  *
  * - camelCase should be used for keys, so that they are distinguishable from plurals
@@ -18,14 +11,15 @@
 import { initReactI18next } from 'react-i18next'
 import i18n from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
-import HttpApi from 'i18next-http-backend'
+import Backend from 'i18next-locize-backend'
+
+const isProduction = import.meta.env.PROD
 
 export function initI18n() {
   i18n
-    // load translation using http -> see /public/locales (i.e. https://github.com/i18next/react-i18next/tree/master/example/react/public/locales)
-    // learn more: https://github.com/i18next/i18next-http-backend
-    // want your translations to be loaded from a professional CDN? => https://github.com/locize/react-tutorial#step-2---use-the-locize-cdn
-    .use(HttpApi)
+    // Locize Backend
+    // https://docs.locize.com/
+    .use(Backend)
     // detect user language
     // learn more: https://github.com/i18next/i18next-browser-languageDetector
     .use(LanguageDetector)
@@ -34,20 +28,17 @@ export function initI18n() {
 
     // init i18next
     // for all options read: https://www.i18next.com/overview/configuration-options
-
-    // 🤔 init is returning a promise. Maybe at some point it will be useful to
-    // await the promise to make sure the i18n instance is ready.
     .init({
-      debug: import.meta.env.DEV,
+      debug: !isProduction,
       fallbackLng: 'en',
-      ns: ['main', 'common'],
+      ns: ['main', 'common', 'glossary'],
       interpolation: {
         escapeValue: false, // not needed for react as it escapes by default
       },
+      saveMissing: true,
       backend: {
-        // When using GH Pages the path is different, because the files are not served from the root.
-        // That's why we need to specify the path here.
-        loadPath: '/react-i18n-demo/locales/{{lng}}/{{ns}}.json',
+        projectId: import.meta.env.VITE_LOCIZE_PROJECT_ID as string,
+        apiKey: import.meta.env.VITE_LOCIZE_API_KEY as string,
       },
     })
 }

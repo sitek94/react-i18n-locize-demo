@@ -20,7 +20,12 @@ export function AboutInitialization() {
       >
         {t('aboutInitialization.description2')}
       </a>
-      <p>{t('aboutInitialization.webhookTest')}</p>
+      <p>
+        {t(
+          'aboutInitialization.missingKeyTest',
+          'This should show up in the locize editor'
+        )}
+      </p>
     </Section>
   )
 }

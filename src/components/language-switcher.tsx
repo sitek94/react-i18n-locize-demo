@@ -8,24 +8,45 @@ const languages = {
     nativeName: '🇺🇲 English',
     locale: enUS,
   },
+  es: {
+    nativeName: '🇪🇸 Español',
+    locale: es,
+  },
   pl: {
     nativeName: '🇵🇱 Polski',
     locale: pl,
   },
-  es: {
-    nativeName: '🇪🇸 Español',
-    locale: es,
-  }
 }
 
 export function LanguageSwitcher() {
   const { i18n } = useTranslation()
 
+  React.useEffect(() => {
+    // In official docs this method is used to get all the languages, and then
+    // use them to render the possible options. I'm using it only to check if
+    // the languages from locize match the languages that the app supports.
+    i18n.services.backendConnector.backend.getLanguages(
+      (error: unknown, response: Record<string, unknown>) => {
+        console.log(response)
+        if (error) {
+          console.log(error)
+          return
+        }
+
+        for (const language in response) {
+          if (!(language in languages)) {
+            console.error(`Language ${language} is not supported`)
+          }
+        }
+      }
+    )
+  }, [i18n])
+
   return (
     <div className="language-switcher">
       {Object.entries(languages).map(([language, { nativeName, locale }]) => {
         const isSelected = language === i18n.resolvedLanguage
-        console.log({ language, resolved: i18n.resolvedLanguage })
+
         return (
           <button
             type="button"
