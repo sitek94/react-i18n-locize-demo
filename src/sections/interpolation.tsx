@@ -19,7 +19,7 @@ export function Interpolation() {
           onChange={e => setName(e.target.value)}
           style={{ marginRight: '0.5rem' }}
         />
-        {t('interpolation.input_label')}
+        {t('interpolation.inputLabel')}
       </label>
     </Section>
   )

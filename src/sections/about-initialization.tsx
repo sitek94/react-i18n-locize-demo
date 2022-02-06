@@ -7,9 +7,9 @@ export function AboutInitialization() {
   const { t } = useTranslation()
 
   return (
-    <Section title={t('about_initialization.title')}>
+    <Section title={t('aboutInitialization.title')}>
       <p>
-        <Trans i18nKey="about_initialization.description_1">
+        <Trans i18nKey="aboutInitialization.description1">
           i18n is initialized in <code>src/i18n.ts</code> file.
         </Trans>
       </p>
@@ -18,9 +18,9 @@ export function AboutInitialization() {
         target="_blank"
         rel="noreferrer noopener"
       >
-        {t('about_initialization.description_2')}
+        {t('aboutInitialization.description2')}
       </a>
-      <p>{t('about_initialization.webhook_test')}</p>
+      <p>{t('aboutInitialization.webhookTest')}</p>
     </Section>
   )
 }

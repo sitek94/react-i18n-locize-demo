@@ -12,7 +12,7 @@ export function MultipleFallbackKeys() {
   const errorCode = errorCodes[errorIndex]
 
   return (
-    <Section title={t('multiple_fallback_keys.title')}>
+    <Section title={t('multipleFallbackKeys.title')}>
       <Example>
         <span style={{ fontSize: '2rem', marginRight: '0.5rem' }}>
           {errorCode}
@@ -26,16 +26,16 @@ export function MultipleFallbackKeys() {
       >
         <span
           role="image"
-          aria-label={t('multiple_fallback_keys.button.image')}
+          aria-label={t('multipleFallbackKeys.button.image')}
           style={{ marginRight: '0.5rem' }}
         >
           💣
         </span>
-        {t('multiple_fallback_keys.button.text')}
+        {t('multipleFallbackKeys.button.text')}
       </button>
-      <p>{t('multiple_fallback_keys.description')}</p>
+      <p>{t('multipleFallbackKeys.description')}</p>
       <Example>
-        {t('multiple_fallback_keys.example', {
+        {t('multipleFallbackKeys.example', {
           errorCode,
           message: t([`common:error.${errorCode}`, 'common:error.unspecific']),
         })}

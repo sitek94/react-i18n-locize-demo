@@ -15,7 +15,7 @@ export function App() {
   return (
     <>
       <Header>
-        <h1>{t('app_title')} ⚗️</h1>
+        <h1>{t('appTitle')} ⚗️</h1>
       </Header>
       <Navbar>
         <LanguageSwitcher />

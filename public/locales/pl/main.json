@@ -1,10 +1,10 @@
 {
-    "app_title": "React i18n Demko",
-    "about_initialization": {
+    "appTitle": "React i18n Demko",
+    "aboutInitialization": {
         "title": "To i owo o inicjalizacji",
-        "description_1": "i18n znajdziemy w pliku <1>src/i18n.ts</1>.",
-        "description_2": "Obczaj sobie mordko dokumentację i18next",
-        "webhook_test": "Widzą jak się wożę, testują..."
+        "description1": "i18n znajdziemy w pliku <1>src/i18n.ts</1>.",
+        "description2": "Obczaj sobie mordko dokumentację i18next",
+        "webhookTest": "Widzą jak się wożę, testują..."
     },
     "plurals": {
         "title": "Pluralizacja",
@@ -20,9 +20,9 @@
         "title": "Interpolacja",
         "description": "Interpolacja jest używana do wstawiania dynamicznych wartości do tekstu.",
         "example": "Siema, {{name}}! Co tam słychać w wielkim świecie?",
-        "input_label": "Edytuj imię"
+        "inputLabel": "Edytuj imię"
     },
-    "multiple_fallback_keys": {
+    "multipleFallbackKeys": {
         "title": "Klucze awaryjne",
         "button": {
             "text": "Następny error!",
@@ -30,9 +30,5 @@
         },
         "description": "Możemy połączyć fallback keys z interpolacją, a nawet przetłumaczyć zmienne które interpolujemy!",
         "example": "Mamy jakiś tam kod błędu: '{{errorCode}}', który mówi, że: '{{message}}', najsss!"
-    },
-    "webhooks": {
-        "text": "Testujemy sobie integrację z PO Edytorem",
-        "title": "Webhooki"
     }
 }

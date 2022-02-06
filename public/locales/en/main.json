@@ -1,0 +1,35 @@
+{
+  "aboutInitialization": {
+    "description1": "i18n is initialized in <1>src/i18n.ts</1> file.",
+    "description2": "Visit i18next documentation to learn more",
+    "title": "About Initialization",
+    "webhookTest": "They see me rollin', they testin'..."
+  },
+  "appTitle": "React i18n Demo",
+  "dateFns": {
+    "title": "date-fns and i18n"
+  },
+  "interpolation": {
+    "description": "You can use interpolation to insert dynamic values into strings.",
+    "example": "Hello, {{name}}! How are you?",
+    "multipleFallbackKeys": "Edit the name",
+    "title": "Interpolation"
+  },
+  "multipleFallbackKeys": {
+    "button": {
+      "image": "Bomb",
+      "text": "Next error, please!"
+    },
+    "description": "We can combine multiple fallback keys with interpolation, and even translate the variables that are interpolated!",
+    "example": "So here's an error code: '{{errorCode}}', and it says: '{{message}}', nice huh?",
+    "title": "Multiple Fallback Keys"
+  },
+  "plurals": {
+    "count": "Count:",
+    "description": "There are \"special\" key suffixes that can be used to handle plurals. In English these are \"_zero\", \"_one\" and \"_other\".",
+    "example_one": "You have uploaded 1 reading.",
+    "example_other": "You have uploaded {{count}} readings.",
+    "example_zero": "You haven't uploaded any readings :(",
+    "title": "Plurals"
+  }
+}
