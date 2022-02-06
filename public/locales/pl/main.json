@@ -1,34 +1,33 @@
 {
-    "appTitle": "React i18n Demko",
-    "aboutInitialization": {
-        "title": "To i owo o inicjalizacji",
-        "description1": "i18n znajdziemy w pliku <1>src/i18n.ts</1>.",
-        "description2": "Obczaj sobie mordko dokumentację i18next",
-        "webhookTest": "Widzą jak się wożę, testują..."
+  "aboutInitialization": {
+    "description1": "i18n znajdziemy w pliku <1>src/i18n.ts</1>.",
+    "description2": "Obczaj sobie mordko dokumentację i18next",
+    "title": "To i owo o inicjalizacji",
+    "webhookTest": "Widzą jak się wożę, testują..."
+  },
+  "appTitle": "React i18n Demko",
+  "interpolation": {
+    "description": "Interpolacja jest używana do wstawiania dynamicznych wartości do tekstu.",
+    "example": "Siema, {{name}}! Co tam słychać w wielkim świecie?",
+    "title": "Interpolacja"
+  },
+  "multipleFallbackKeys": {
+    "button": {
+      "image": "Bomba",
+      "text": "Następny error!"
     },
-    "plurals": {
-        "title": "Pluralizacja",
-        "description": "Do obsługi liczby mnogiej możemy wykorzystać sufiksy kluczy. W języku polskim są\n                to \"_zero\", \"_one\", \"_few\", \"_many\" oraz \"_other\" - co do tego ostatniego to nie jestem pewien kiedy jest używany ¯\\_(ツ)_/¯.",
-        "count": "Count",
-        "example_zero": "Nie dodano żadnych odczytów",
-        "example_one": "Dodano 1 odczyt",
-        "example_other": "Dodano {{count}} odczytu",
-        "example_few": "Dodano {{count}} odczyty",
-        "example_many": "Dodano {{count}} odczytów"
-    },
-    "interpolation": {
-        "title": "Interpolacja",
-        "description": "Interpolacja jest używana do wstawiania dynamicznych wartości do tekstu.",
-        "example": "Siema, {{name}}! Co tam słychać w wielkim świecie?",
-        "inputLabel": "Edytuj imię"
-    },
-    "multipleFallbackKeys": {
-        "title": "Klucze awaryjne",
-        "button": {
-            "text": "Następny error!",
-            "image": "Bomba"
-        },
-        "description": "Możemy połączyć fallback keys z interpolacją, a nawet przetłumaczyć zmienne które interpolujemy!",
-        "example": "Mamy jakiś tam kod błędu: '{{errorCode}}', który mówi, że: '{{message}}', najsss!"
-    }
+    "description": "Możemy połączyć fallback keys z interpolacją, a nawet przetłumaczyć zmienne które interpolujemy!",
+    "example": "Mamy jakiś tam kod błędu: '{{errorCode}}', który mówi, że: '{{message}}', najsss!",
+    "title": "Klucze awaryjne"
+  },
+  "plurals": {
+    "count": "Count",
+    "description": "Do obsługi liczby mnogiej możemy wykorzystać sufiksy kluczy. W języku polskim są\n                to \"_zero\", \"_one\", \"_few\", \"_many\" oraz \"_other\" - co do tego ostatniego to nie jestem pewien kiedy jest używany ¯\\_(ツ)_/¯.",
+    "example_few": "Dodano {{count}} odczyty",
+    "example_many": "Dodano {{count}} odczytów",
+    "example_one": "Dodano 1 odczyt",
+    "example_other": "Dodano {{count}} odczytu",
+    "example_zero": "Nie dodano żadnych odczytów",
+    "title": "Pluralizacja"
+  }
 }

@@ -1,15 +1,15 @@
 {
   "error": {
-    "unspecific": "Something went wrong",
     "400": "Bad request",
     "401": "Unauthorized",
     "403": "Forbidden",
     "404": "Not found",
     "500": "Internal server error",
     "503": "Service unavailable",
-    "504": "Gateway timeout"
+    "504": "Gateway timeout",
+    "unspecific": "Something went wrong"
   },
+  "reset": "reset",
   "start": "start",
-  "stop": "stop",
-  "reset": "reset"
+  "stop": "stop"
 }

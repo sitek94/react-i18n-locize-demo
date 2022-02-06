@@ -10,8 +10,8 @@
  *
  * 🚓 Keys Naming Convention
  *
- * - snake_case should be used for keys
- *   - for keys with numbers use snake_case as well: "column_1"
+ * - camelCase should be used for keys, so that they are distinguishable from plurals
+ *   - e.g. "helloWorld", "column1", "column2"
  * - use full words: "description" instead of "desc"
  */
 
@@ -40,7 +40,7 @@ export function initI18n() {
     .init({
       debug: import.meta.env.DEV,
       fallbackLng: 'en',
-      ns: ['translation', 'common'],
+      ns: ['main', 'common'],
       interpolation: {
         escapeValue: false, // not needed for react as it escapes by default
       },
