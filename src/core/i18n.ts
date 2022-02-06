@@ -17,12 +17,18 @@ import LastUsed from 'locize-lastused'
 const isProduction = import.meta.env.PROD
 
 const locizeOptions = {
-  projectId: import.meta.env.VITE_LOCIZE_PROJECT_ID as string,
-  apiKey: import.meta.env.VITE_LOCIZE_API_KEY as string,
+  projectId: import.meta.env.VITE_LOCIZE_PROJECT_ID,
+  apiKey: import.meta.env.VITE_LOCIZE_API_KEY,
+  referenceLng: import.meta.env.VITE_LOCIZE_REFERENCE_LANGUAGE,
+  version: import.meta.env.VITE_LOCIZE_VERSION,
 }
 
 export function initI18n() {
   if (!isProduction) {
+    // locize-lastused
+    // sets a timestamp of last access on every translation segment on locize
+    // -> safely remove the ones not being touched for weeks/months
+    // https://github.com/locize/locize-lastused
     i18n.use(LastUsed)
   }
 
@@ -30,9 +36,11 @@ export function initI18n() {
     // Locize Backend
     // https://docs.locize.com/
     .use(Backend)
+
     // detect user language
     // learn more: https://github.com/i18next/i18next-browser-languageDetector
     .use(LanguageDetector)
+
     // pass the i18n instance to react-i18next.
     .use(initReactI18next)
 
@@ -45,7 +53,8 @@ export function initI18n() {
       interpolation: {
         escapeValue: false, // not needed for react as it escapes by default
       },
-      saveMissing: true,
+      // We should not save missing translation keys in production
+      saveMissing: !isProduction,
       backend: locizeOptions,
 
       locizeLastUsed: {

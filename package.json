@@ -7,9 +7,7 @@
     "preview": "vite preview --port 8080",
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
     "lint": "eslint --ext ts,tsx src/",
-    "lint:fix": "npm run lint -- --fix",
-    "locize:sync": "source .env.local && locize sync --ver=latest --path=./public/locales --project-id=$VITE_LOCIZE_PROJECT_ID --api-key=$VITE_LOCIZE_API_KEY",
-    "locize:sync:update-values": "yarn locize:sync --update-values=true --reference-language-only=false"
+    "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
     "date-fns": "^2.28.0",
