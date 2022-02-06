@@ -12,10 +12,20 @@ import { initReactI18next } from 'react-i18next'
 import i18n from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import Backend from 'i18next-locize-backend'
+import LastUsed from 'locize-lastused'
 
 const isProduction = import.meta.env.PROD
 
+const locizeOptions = {
+  projectId: import.meta.env.VITE_LOCIZE_PROJECT_ID as string,
+  apiKey: import.meta.env.VITE_LOCIZE_API_KEY as string,
+}
+
 export function initI18n() {
+  if (!isProduction) {
+    i18n.use(LastUsed)
+  }
+
   i18n
     // Locize Backend
     // https://docs.locize.com/
@@ -36,9 +46,17 @@ export function initI18n() {
         escapeValue: false, // not needed for react as it escapes by default
       },
       saveMissing: true,
-      backend: {
-        projectId: import.meta.env.VITE_LOCIZE_PROJECT_ID as string,
-        apiKey: import.meta.env.VITE_LOCIZE_API_KEY as string,
+      backend: locizeOptions,
+
+      locizeLastUsed: {
+        ...locizeOptions,
+
+        // debounce interval to send data in milliseconds
+        debounceSubmit: 90000,
+
+        // hostnames that are allowed to send last used data
+        // please keep those to your local system, staging, test servers (not production)
+        allowedHosts: ['localhost'],
       },
     })
 }

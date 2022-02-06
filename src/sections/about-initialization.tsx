@@ -26,6 +26,12 @@ export function AboutInitialization() {
           'This should show up in the locize editor'
         )}
       </p>
+      <p>
+        {t(
+          'aboutInitialization.missingKeyTest2',
+          'This should be automatically translated'
+        )}
+      </p>
     </Section>
   )
 }
