@@ -1,17 +1,11 @@
-# React i18n Demo ⚗️
+# React i18n Locize Demo ⚗️
 
 > 🚧 &nbsp; work in progress &nbsp;🚧
 
-## Localization Flow
+## Description
 
-![React i18n Demo - Localization Flow](./docs/localization-flow-v1-dark.png#gh-dark-mode-only)
-![React i18n Demo - Localization Flow](./docs/localization-flow-v1-light.png#gh-light-mode-only)
-
-## Localization service
-
-As of now I'm using [POEditor](https://www.poeditor.com/) as a localization service. Why? Well, it's a tool that is used
-in my day job's project, so I want to explore its possibilities. However, in the future I'm definitely going to check 
-out [locize](https://locize.com/), which is a service created by the authors of [i18next](https://www.i18next.com/).
+This project is a clone of [react-i18n-next](https://github.com/sitek94/react-i18n-demo) with the main difference that 
+it uses [Locize](https://locize.app) as localization service.
 
 ## Resources
 
